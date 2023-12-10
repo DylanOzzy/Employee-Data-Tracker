@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const databaseFunctions = require('./assets/js/dataBaseFunctions');
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -66,12 +67,12 @@ const startApp = () => {
                 {
                   type: 'input',
                   name: 'firstName',
-                  message: 'Enter the employee\'s first name:',
+                  message: 'Enter the employees first name:',
                 },
                 {
                   type: 'input',
                   name: 'lastName',
-                  message: 'Enter the employee\'s last name:',
+                  message: 'Enter the employees last name:',
                 },
                 {
                   type: 'input',
