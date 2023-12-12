@@ -3,7 +3,7 @@ const queryAsync = require('../config/connection')
 
 const viewAllDepartments = async () => {
   try {
-    const query = 'SELECT * FROM departments';
+    const query = 'SELECT id, name FROM departments';
     const res = await queryAsync(query);
     console.table(res);
   } catch (err) {
@@ -13,7 +13,7 @@ const viewAllDepartments = async () => {
 
 const viewAllRoles = async () => {
   try {
-    const query = 'SELECT * FROM roles';
+    const query = 'SELECT id, title, salary, department_id FROM roles';
     const res = await queryAsync(query);
     console.table(res);
   } catch (err) {
@@ -23,7 +23,7 @@ const viewAllRoles = async () => {
 
 const viewAllEmployees = async () => {
   try {
-    const query = 'SELECT * FROM employees';
+    const query = 'SELECT id, first_name, last_name, role_id, manager_id FROM employees';
     const res = await queryAsync(query);
     console.table(res);
   } catch (err) {
