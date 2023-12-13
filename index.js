@@ -114,4 +114,4 @@ const startApp = async () => {
   }
 };
 
-startApp(); // Removed the extra curly brace here
+startApp(); 
